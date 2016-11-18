@@ -1,0 +1,10 @@
+a=[2,3,56,8,7,94,5,213,5]
+firstMax = max(a[0], a[1])
+secondMax = min(a[0], a[1])
+for elem in a:
+    if elem >= firstMax:
+        secondMax = firstMax
+        firstMax = elem
+    else if elem > secondMax:
+        secondMax = elem
+print(secondMax)
