@@ -1,24 +1,22 @@
 #include <iostream>
-#include <vector>
-#include <stdlib.h>
+#include <algorithm>
 using namespace std;
 
 int main() {
-	int n,a[50],b[50],ct=0;
-	cin>>n;
-	for(int i=0;i<n;i++){
-		cin>>a[i]>>b[i];
+	int n,m,ct=0,md=999999;
+	cin>>n>>m;
+	int a[m];
+	for(int i=0;i<m;i++){
+		cin>>a[i];
 	}
-	for (int i = 0; i < n; i++){
-    	for (int j = 0; j < n; ++j)
-    	{
-    		cout<<a[i]<<b[j]<<endl;
-    		if(i==j);
-    		else if(a[i]==b[j]){
-    			ct+=1;
-    		}
-    	}
-	}  
-	cout<<ct;
 	
+	int x = sizeof(a)/ sizeof(a[0]);
+    sort(a, a+x);
+	for (int i = 0; i < m-n; i++){
+		ct=a[i+n-1]-a[i];
+		cout<<a[i+n-1]<<" "<<a[i]<<endl;
+		if(md>ct) md=ct;
+	}  
+	cout<<md;
+	return 0;	
 }
