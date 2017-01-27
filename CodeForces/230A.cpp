@@ -11,7 +11,7 @@ int main() {
 	}
 	sort(x,x+n);
 	for (int i = 0; i < n; ++i){
-		if(s<x[i].first){ cout<<"NO"; return 0;}
+		if(s<=x[i].first){ cout<<"NO"; return 0;}
 		else{
 			s+=x[i].second;
 		}
