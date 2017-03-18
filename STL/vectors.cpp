@@ -12,8 +12,8 @@ for (int i = 0; i >10; i++)
 
 cout<<"size:"<<v.size()<<endl;
 bool empty=v.empty();//This is because not all the containers can report their size in O(1), and you definitely should not require counting all elements in a double-linked list just to ensure that it contains at least one.
- for(int i = 1; i < 20; i *= 2) { 
-      v.push_back(i); //adds to the end by memory allocation
+ for(int i = 1; i < 20; i *= 2) {
+       v.push_back(i); //adds to the end by memory allocation
  } 
 
  v.resize(25);//adds free memory spaces. pushback after this operation will further increase the size of the array
