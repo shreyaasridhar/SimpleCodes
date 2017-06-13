@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <utility>
+#include <set>
 #define ll long long
 #define mp make_pair
 #define pb push_back
@@ -12,12 +16,12 @@
 using namespace std;
 
 struct custom_comparator {
-    bool operator()(const std::pair<int, int>& a,  const std::pair<int, int>& b) const
+    bool operator()(const pair<int, int>& a,  const pair<int, int>& b) const
     {
-        return less_comparator(std::minmax(a.first, a.second),std::minmax(b.first, b.second));
+        return less_comparator(minmax(a.first, a.second),minmax(b.first, b.second));
     }
 
-    std::less<std::pair<int, int> > less_comparator;
+    less<pair<int, int> > less_comparator;
 };
 
 int main()
@@ -34,7 +38,7 @@ int main()
 			cin>>y>>z;
 			tck.pb(mp(y,z));
 		}
-		std::set<std::pair<int, int>, custom_comparator> unique;
+		set<pair<int, int>, custom_comparator> unique;
 		for (const auto& p : tck) {
         unique.insert(p);
         }
