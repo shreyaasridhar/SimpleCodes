@@ -12,8 +12,11 @@ typedef vector< pair < int , int > > vpii;
 typedef vector < int > vi;
 typedef vector < ll > vll;
 #define all(v) v.begin(),v.end()
-void _main(); int main() {cin.tie(0);ios::sync_with_stdio(false); _main(); return 0; }
-    
+void _main(); int main() {cin.tie(0);ios::sync_with_stdio(false); 
+	//freopen("input.txt", "r", stdin);
+//	freopen("output.txt", "w", stdout); 
+_main(); return 0; }
+            
 void _main(){
 	
 }  
