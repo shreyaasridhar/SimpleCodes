@@ -24,9 +24,8 @@ int main()
 	cout.tie(NULL);
 	ll n;
 	for(ll i=2;i<n;i++)
-		for(ll j=i*i;j<n;j*i)
-			if(!c[j])
-                c[j] = true;
+		for(ll j=i+i;j<n;j+=i)
+			if(!c[j]) c[j] = true;
     for(int i=1; i<=n; ++i)
         if(!c[i])
             cout<<i<<" ";
