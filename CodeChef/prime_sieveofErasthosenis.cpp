@@ -24,7 +24,7 @@ int main()
 	cout.tie(NULL);
 	ll n;
 	for(ll i=2;i<n;i++)
-		for(ll j=i+1;j<n;j*i)
+		for(ll j=i*i;j<n;j*i)
 			if(!c[j])
                 c[j] = true;
     for(int i=1; i<=n; ++i)
